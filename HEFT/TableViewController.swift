@@ -10,13 +10,15 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    func getPrice() {
-        if let url = URL(string: "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR") {
+    func getJson() {
+        if let url = URL(string: "https://api.weather.gov/alerts/active?area=GA") {
             URLSession.shared.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) in
                 if error == nil {
                     if data != nil {
                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:Double] {
                             DispatchQueue.main.async {
+                                
+                                            print(json)
                                 /*
                                 if let usdPrice = json["USD"] {
                                     self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
@@ -46,6 +48,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getJson()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
