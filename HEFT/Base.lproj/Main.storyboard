@@ -10,7 +10,7 @@
         <!--HEFT-->
         <scene sceneID="2N2-1J-ogY">
             <objects>
-                <tableViewController id="H89-Gf-mT3" sceneMemberID="viewController">
+                <tableViewController id="H89-Gf-mT3" customClass="TableViewController" customModule="HEFT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oT9-PA-Wns">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

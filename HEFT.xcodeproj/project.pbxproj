@@ -16,6 +16,7 @@
 		42650B0024D4A51D001E5502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42650AFE24D4A51D001E5502 /* LaunchScreen.storyboard */; };
 		42650B0B24D4A51E001E5502 /* HEFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42650B0A24D4A51E001E5502 /* HEFTTests.swift */; };
 		42650B1624D4A51E001E5502 /* HEFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42650B1524D4A51E001E5502 /* HEFTUITests.swift */; };
+		42650B2424D4D490001E5502 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42650B2324D4D490001E5502 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		42650B1124D4A51E001E5502 /* HEFTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEFTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42650B1524D4A51E001E5502 /* HEFTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEFTUITests.swift; sourceTree = "<group>"; };
 		42650B1724D4A51E001E5502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42650B2324D4D490001E5502 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				42650AF224D4A516001E5502 /* SceneDelegate.swift */,
 				42650AF424D4A516001E5502 /* ViewController.swift */,
 				42650AF624D4A516001E5502 /* Main.storyboard */,
+				42650B2324D4D490001E5502 /* TableViewController.swift */,
 				42650AFC24D4A51D001E5502 /* Assets.xcassets */,
 				42650AFE24D4A51D001E5502 /* LaunchScreen.storyboard */,
 				42650B0124D4A51D001E5502 /* Info.plist */,
@@ -265,6 +268,7 @@
 				42650AFB24D4A516001E5502 /* HEFT.xcdatamodeld in Sources */,
 				42650AF524D4A516001E5502 /* ViewController.swift in Sources */,
 				42650AF124D4A516001E5502 /* AppDelegate.swift in Sources */,
+				42650B2424D4D490001E5502 /* TableViewController.swift in Sources */,
 				42650AF324D4A516001E5502 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
