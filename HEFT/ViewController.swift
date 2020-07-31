@@ -12,7 +12,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var statePicker: UIPickerView!
     
-    let states = [ "AK - Alaska",
+
+    
+    let states = ["AK - Alaska",
     "AL - Alabama",
     "AR - Arkansas",
     "AZ - Arizona",
@@ -78,13 +80,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         stateLabel.text = states[row]
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+      
         
     }
 
