@@ -84,7 +84,37 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        func getPrice() {
+        if let url = URL(string: "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR") {
+            URLSession.shared.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) in
+                if error == nil {
+                    if data != nil {
+                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:Double] {
+                            DispatchQueue.main.async {
+                                /*
+                                if let usdPrice = json["USD"] {
+                                    self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
+                                    UserDefaults.standard.set(self.getStringFor(price: usdPrice, currencyCode: "USD") + "~", forKey: "USD")
+                                }
+                                if let eurPrice = json["EUR"] {
+                                    self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
+                                    UserDefaults.standard.set(self.getStringFor(price: eurPrice, currencyCode: "EUR") + "~", forKey: "EUR")
+                                }
+                                if let jpyPrice = json["JPY"] {
+                                    self.jpyLabel.text = self.getStringFor(price: jpyPrice, currencyCode: "JPY")
+                                    UserDefaults.standard.set(self.getStringFor(price: jpyPrice, currencyCode: "JPY") + "~", forKey: "JPY")
+                                }
+                                */
+                            }
+                        }
+                    }
+                    
+                    
+                } else {
+                    print("We have an error")
+                }
+            }.resume()
+        }
         
     }
 
