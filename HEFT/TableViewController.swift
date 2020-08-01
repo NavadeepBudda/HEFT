@@ -21,7 +21,10 @@ class TableViewController: UITableViewController {
                                 
                                 
                                 if let features = json["features"] {
-                                    print(features)
+                                    var keepgoingfeatures = features.count
+                                    while keepgoingfeatures != 0{
+                                        
+                                    }
                                 }/*
                                 if let eurPrice = json["EUR"] {
                                     self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
