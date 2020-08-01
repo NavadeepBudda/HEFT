@@ -12,6 +12,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var statePicker: UIPickerView!
     
+    
+    var statePicked = ""
+    
 
     
     let states = ["AK - Alaska",
