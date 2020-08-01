@@ -15,10 +15,10 @@ class TableViewController: UITableViewController {
             URLSession.shared.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) in
                 if error == nil {
                     if data != nil {
-                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:Double] {
+                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] {
                             DispatchQueue.main.async {
                                 
-                                            print(json)
+                                print(json)
                                 /*
                                 if let usdPrice = json["USD"] {
                                     self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
