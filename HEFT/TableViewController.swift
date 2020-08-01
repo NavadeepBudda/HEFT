@@ -9,6 +9,8 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var features : [Feature] = []
 
     func getJson() {
         if let url = URL(string: "https://api.weather.gov/alerts/active?area=GA") {
@@ -18,12 +20,15 @@ class TableViewController: UITableViewController {
                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] {
                             DispatchQueue.main.async {
                                 
-                                
-                                
-                                if let features = json["features"] {
-                                    var keepgoingfeatures = features.count
+                                if let rawfeatures = json["features"] {
+                                    var keepgoingfeatures = rawfeatures.count
                                     while keepgoingfeatures != 0{
-                                        
+                                        let currentFeature = Feature()
+                                        currentFeature.event = rawfeatures["event"] as! String
+                                        currentFeature.description = rawfeatures["description"] as! String
+                                        currentFeature.instructions = rawfeatures["instructions"] as! String
+                                        currentFeature.urgency = rawfeatures["urgency"] as! String
+                                        keepgoingfeatures! -= 1
                                     }
                                 }/*
                                 if let eurPrice = json["EUR"] {
