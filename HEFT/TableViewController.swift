@@ -19,22 +19,35 @@ class TableViewController: UITableViewController {
                     if data != nil {
                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] {
                             DispatchQueue.main.async {
-                                
+                                print("Json is starting to be decoded")
                                 //if let rawfeatures = json["features"] {
                                 var rawfeatures = json["features"] as! [Dictionary< String, AnyObject>]
+                                print("rawfeatures.count \(rawfeatures.count)")
                                 var keepgoingfeatures = rawfeatures.count
                                 var FeatureIndex = 0
                                 while keepgoingfeatures != 0{
                                     let currentRawFeature = rawfeatures[FeatureIndex]
                                     let currentRawFeatureProperties = currentRawFeature["properties"]
+                                    /*
                                     let currentFeature = Feature()
                                     currentFeature.event = currentRawFeatureProperties!["event"] as! String
                                     currentFeature.description = currentRawFeatureProperties!["description"] as! String
                                     currentFeature.instructions = currentRawFeatureProperties!["instruction"] as! String
                                     currentFeature.urgency = currentRawFeatureProperties!["urgency"] as! String
+ */
+                                    let currentFeature = Feature()
+                                    currentFeature.event = currentRawFeatureProperties!["event"] as? String ?? ""
+                                    currentFeature.description = currentRawFeatureProperties!["description"] as? String ?? ""
+                                    currentFeature.instructions = currentRawFeatureProperties!["instruction"]  as? String ?? "No Instructions Were Provided"
+                                    currentFeature.urgency = currentRawFeatureProperties!["urgency"] as? String ?? ""
+                                    
                                     keepgoingfeatures -= 1
                                     FeatureIndex += 1
+                                    print("Before Print Current Feature")
+                                    print(currentFeature.instructions)
+                                    print("After Print Current Feature")
                                 }
+                                print(self.features)
                             }
                         }
                     }
@@ -49,9 +62,11 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        features = []
+        print("Function Starting")
         getJson()
-        print(features)
+        print("Function Over")
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
