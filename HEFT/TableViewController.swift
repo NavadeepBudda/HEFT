@@ -18,12 +18,11 @@ class TableViewController: UITableViewController {
                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] {
                             DispatchQueue.main.async {
                                 
-                                print(json)
-                                /*
-                                if let usdPrice = json["USD"] {
-                                    self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
-                                    UserDefaults.standard.set(self.getStringFor(price: usdPrice, currencyCode: "USD") + "~", forKey: "USD")
-                                }
+                                
+                                
+                                if let features = json["features"] {
+                                    print(features)
+                                }/*
                                 if let eurPrice = json["EUR"] {
                                     self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
                                     UserDefaults.standard.set(self.getStringFor(price: eurPrice, currencyCode: "EUR") + "~", forKey: "EUR")
