@@ -60,6 +60,7 @@ class TableViewController: UITableViewController {
                                     }
                                 print("going to reload data")
                                 self.tableView.reloadData()
+                                    self.title = "Alerts"
                                     print("did reload data")
                                 }
                             }
