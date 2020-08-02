@@ -190,7 +190,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next" image="Rectangle blue"/>
                                 <connections>
-                                    <segue destination="H89-Gf-mT3" kind="show" id="kll-kp-DzQ"/>
+                                    <action selector="done:" destination="Xap-gd-kt1" eventType="touchUpInside" id="jPz-u7-rnV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AU-Ai-rco">
@@ -217,6 +217,7 @@
                     <connections>
                         <outlet property="stateLabel" destination="Lf1-I8-Dve" id="yRd-vu-BSl"/>
                         <outlet property="statePicker" destination="FM5-3L-waS" id="zFe-Ou-mae"/>
+                        <segue destination="H89-Gf-mT3" kind="show" identifier="homeToTable" id="thy-yk-ShR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUY-5Q-UfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
