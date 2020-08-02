@@ -63,9 +63,14 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+
         print("Function Starting")
+        features = []
         getJson()
         print("Function Over")
+        
         
         
         
