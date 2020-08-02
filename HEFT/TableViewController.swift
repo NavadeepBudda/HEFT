@@ -58,6 +58,9 @@ class TableViewController: UITableViewController {
                                         print(currentFeature.instructions)
                                         print("After Print Current Feature")
                                     }
+                                print("going to reload data")
+                                self.tableView.reloadData()
+                                    print("did reload data")
                                 }
                             }
                         }
@@ -87,6 +90,11 @@ class TableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView,
+             heightForRowAt indexPath: IndexPath) -> CGFloat {
+     // Make the first row larger to accommodate a custom cell.
+        return 180
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 print("Table View Loading")
         var cell = tableView.dequeueReusableCell(withIdentifier: "ourCell", for: indexPath) as! TableViewCell
