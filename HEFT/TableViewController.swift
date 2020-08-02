@@ -152,7 +152,7 @@ class TableViewController: UITableViewController {
         }
         
         print(apiWeb)
-        
+        features = []
         print("Code Starting")
         if let url = URL(string: apiWeb) {
                 URLSession.shared.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) in
@@ -233,6 +233,18 @@ class TableViewController: UITableViewController {
         cell.cellTitle?.text = cellFeature.event
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let myAlert = features[indexPath.row]
+            
+           performSegue(withIdentifier: "tableToInfo", sender: myAlert)
+       }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let DesVC = segue.destination as! InfoViewController
+        let myAlert = sender as! Feature
+        DesVC.myAlert = myAlert
     }
     
 }
