@@ -36,10 +36,12 @@ class TableViewController: UITableViewController {
                                     currentFeature.urgency = currentRawFeatureProperties!["urgency"] as! String
  */
                                     let currentFeature = Feature()
-                                    currentFeature.event = currentRawFeatureProperties!["event"] as? String ?? ""
-                                    currentFeature.description = currentRawFeatureProperties!["description"] as? String ?? ""
+                                    currentFeature.event = currentRawFeatureProperties!["event"] as? String ?? "Not Provided"
+                                    currentFeature.description = currentRawFeatureProperties!["description"] as? String ?? "No Description Was Provided"
                                     currentFeature.instructions = currentRawFeatureProperties!["instruction"]  as? String ?? "No Instructions Were Provided"
-                                    currentFeature.urgency = currentRawFeatureProperties!["urgency"] as? String ?? ""
+                                    currentFeature.urgency = currentRawFeatureProperties!["urgency"] as? String ?? "Not Provided"
+                                    
+                                    self.features.append(currentFeature)
                                     
                                     keepgoingfeatures -= 1
                                     FeatureIndex += 1
@@ -47,7 +49,6 @@ class TableViewController: UITableViewController {
                                     print(currentFeature.instructions)
                                     print("After Print Current Feature")
                                 }
-                                print(self.features)
                             }
                         }
                     }
