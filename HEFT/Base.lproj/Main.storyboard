@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Sc-HN-EQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Sc-HN-EQd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -105,6 +105,9 @@
                                 <state key="normal" title="Description">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0wF-bc-wLN" kind="show" id="EN0-7u-eg7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-vf-PKU">
                                 <rect key="frame" x="97" y="617" width="220" height="62"/>
@@ -113,6 +116,9 @@
                                 <state key="normal" title="Information">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="oJK-9D-JJ5" kind="show" id="aK8-3d-Sz0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -123,6 +129,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRD-Zm-Q5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2047.826086956522" y="116.51785714285714"/>
+        </scene>
+        <!--Description-->
+        <scene sceneID="2gA-CI-8hn">
+            <objects>
+                <viewController id="0wF-bc-wLN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nMm-uM-emY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5x-vW-kD9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-6H-yYk">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="888"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="EiL-Kq-G0W"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5aU-bI-uEh"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CSM-wj-XEa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Description" id="bxC-9a-k3t"/>
+                    <size key="freeformSize" width="414" height="1250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qK1-b0-2Ja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3365" y="156"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bRF-7t-kFO">
@@ -193,6 +231,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaZ-XR-2qv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-187" y="117"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="6Bj-8g-gwr">
+            <objects>
+                <viewController id="oJK-9D-JJ5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jCy-nE-8bK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adm-Sz-245">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTg-yY-MpS">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="888"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="XvW-S6-51Y"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="dk1-QV-xe4"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OAV-vs-8WK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="tyb-ez-Kp8"/>
+                    <size key="freeformSize" width="414" height="1250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lah-yG-JwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2717" y="156"/>
         </scene>
     </scenes>
     <resources>
