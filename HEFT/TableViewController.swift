@@ -19,27 +19,36 @@ class TableViewController: UITableViewController {
                     if data != nil {
                         if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] {
                             DispatchQueue.main.async {
-                                
-                                if let rawfeatures = json["features"] {
-                                    var keepgoingfeatures = rawfeatures.count
-                                    while keepgoingfeatures != 0{
-                                        let currentFeature = Feature()
-                                        currentFeature.event = rawfeatures["event"] as! String
-                                        currentFeature.description = rawfeatures["description"] as! String
-                                        currentFeature.instructions = rawfeatures["instructions"] as! String
-                                        currentFeature.urgency = rawfeatures["urgency"] as! String
-                                        keepgoingfeatures! -= 1
-                                    }
-                                }/*
-                                if let eurPrice = json["EUR"] {
-                                    self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
-                                    UserDefaults.standard.set(self.getStringFor(price: eurPrice, currencyCode: "EUR") + "~", forKey: "EUR")
+                                print("Json is starting to be decoded")
+                                //if let rawfeatures = json["features"] {
+                                var rawfeatures = json["features"] as! [Dictionary< String, AnyObject>]
+                                print("rawfeatures.count \(rawfeatures.count)")
+                                var keepgoingfeatures = rawfeatures.count
+                                var FeatureIndex = 0
+                                while keepgoingfeatures != 0{
+                                    let currentRawFeature = rawfeatures[FeatureIndex]
+                                    let currentRawFeatureProperties = currentRawFeature["properties"]
+                                    /*
+                                    let currentFeature = Feature()
+                                    currentFeature.event = currentRawFeatureProperties!["event"] as! String
+                                    currentFeature.description = currentRawFeatureProperties!["description"] as! String
+                                    currentFeature.instructions = currentRawFeatureProperties!["instruction"] as! String
+                                    currentFeature.urgency = currentRawFeatureProperties!["urgency"] as! String
+ */
+                                    let currentFeature = Feature()
+                                    currentFeature.event = currentRawFeatureProperties!["event"] as? String ?? "Not Provided"
+                                    currentFeature.description = currentRawFeatureProperties!["description"] as? String ?? "No Description Was Provided"
+                                    currentFeature.instructions = currentRawFeatureProperties!["instruction"]  as? String ?? "No Instructions Were Provided"
+                                    currentFeature.urgency = currentRawFeatureProperties!["urgency"] as? String ?? "Not Provided"
+                                    
+                                    self.features.append(currentFeature)
+                                    
+                                    keepgoingfeatures -= 1
+                                    FeatureIndex += 1
+                                    print("Before Print Current Feature")
+                                    print(currentFeature.instructions)
+                                    print("After Print Current Feature")
                                 }
-                                if let jpyPrice = json["JPY"] {
-                                    self.jpyLabel.text = self.getStringFor(price: jpyPrice, currencyCode: "JPY")
-                                    UserDefaults.standard.set(self.getStringFor(price: jpyPrice, currencyCode: "JPY") + "~", forKey: "JPY")
-                                }
-                                */
                             }
                         }
                     }
@@ -54,8 +63,15 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+
+        print("Function Starting")
         features = []
         getJson()
+        print("Function Over")
+        
+        
         
         
         // Uncomment the following line to preserve selection between presentations
