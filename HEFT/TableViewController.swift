@@ -101,7 +101,7 @@ class TableViewController: UITableViewController {
         
         let cellFeature = features[indexPath.row]
 
-        cell.cellDescript?.text = cellFeature.description
+        cell.cellDescript?.text = cellFeature.urgency
         cell.cellImage?.image = UIImage(named: "Rectangle 5")
         cell.cellTitle?.text = cellFeature.event
         
