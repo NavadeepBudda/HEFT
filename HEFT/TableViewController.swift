@@ -229,7 +229,7 @@ class TableViewController: UITableViewController {
         let cellFeature = features[indexPath.row]
 
         cell.cellDescript?.text = cellFeature.urgency
-        cell.cellImage?.image = UIImage(named: "Rectangle 5")
+        cell.cellImage?.image = UIImage(named: "842e66eb-c73a-4b05-bca7-fac501d4079d (4)")
         cell.cellTitle?.text = cellFeature.event
         
         return cell
