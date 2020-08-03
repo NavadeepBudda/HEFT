@@ -167,7 +167,7 @@
 
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
+                        
                            
                         <viewLayoutGuide key="safeArea" id="XIf-Ze-npJ"/>
                     </view>
