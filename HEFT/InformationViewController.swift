@@ -18,8 +18,10 @@ class InformationViewController: UIViewController {
         super.viewDidLoad()
 
         if option == "Instructions"{
+            title = "Instructions"
             label.text = myAlert.instructions
         } else {
+            title = "Description"
             label.text = myAlert.description
         }
         // Do any additional setup after loading the view.
