@@ -13,6 +13,7 @@ class InfoViewController: UIViewController {
 
     @IBOutlet var eventLabel: UILabel!
     var myAlert = Feature()
+    var myOption = ""
     @IBOutlet var urgencyLabel: UILabel!
     
     override func viewDidLoad() {
@@ -24,10 +25,23 @@ class InfoViewController: UIViewController {
         
     }
     @IBAction func InfoClicked(_ sender: Any) {
-        //performSegue(withIdentifier: "toI", sender: selectedRegionTest)
+        myOption = "Instructions"
+        performSegue(withIdentifier: "toI", sender: myAlert)
     }
     
+    
+    
     @IBAction func DescriptClicked(_ sender: Any) {
+        myOption = "Description"
+        performSegue(withIdentifier: "toI", sender: myAlert)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let DesVC = segue.destination as! InformationViewController
+        let myAlert = sender as! Feature
+        DesVC.myAlert = myAlert
+        DesVC.option = myOption
+        
     }
     
 }
