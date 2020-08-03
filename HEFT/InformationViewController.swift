@@ -9,10 +9,19 @@
 import UIKit
 
 class InformationViewController: UIViewController {
+    @IBOutlet var label: UILabel!
+    
+    var myAlert = Feature()
+    var option = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if option == "Instructions"{
+            label.text = myAlert.instructions
+        } else {
+            label.text = myAlert.description
+        }
         // Do any additional setup after loading the view.
     }
     

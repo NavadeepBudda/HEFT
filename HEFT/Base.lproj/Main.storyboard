@@ -110,14 +110,20 @@
                                 <state key="normal" title="Description">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="DescriptClicked:" destination="2HN-dl-P7o" eventType="touchUpInside" id="Hoh-gl-MN3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-vf-PKU">
-                                <rect key="frame" x="97" y="617" width="220" height="62"/>
+                                <rect key="frame" x="93" y="617" width="229" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="40"/>
-                                <state key="normal" title="Information">
+                                <state key="normal" title="Instructions">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="2HN-dl-P7o" eventType="touchUpInside" id="QzG-7Q-8EX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -130,7 +136,6 @@
                         <outlet property="eventLabel" destination="hrl-VH-rgt" id="IXm-RV-MXf"/>
                         <outlet property="urgencyLabel" destination="hDI-YS-JST" id="o9y-lO-iw6"/>
                         <segue destination="4TA-i2-jxT" kind="show" identifier="toI" id="jDc-H9-NQx"/>
-                        <segue destination="FGH-t1-UP8" kind="show" identifier="toD" id="McJ-ig-9eT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRD-Zm-Q5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,10 +162,13 @@
                         <viewLayoutGuide key="safeArea" id="XIf-Ze-npJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="Elc-MN-EmX"/>
+                    <connections>
+                        <outlet property="label" destination="rKx-Ka-Odh" id="1Ix-ia-YmF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQZ-qo-5YM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765" y="-576"/>
+            <point key="canvasLocation" x="2800" y="117"/>
         </scene>
         <!--Made by Navadeep, Samvid, and Anushka-->
         <scene sceneID="bRF-7t-kFO">
@@ -256,31 +264,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaZ-XR-2qv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-187" y="117"/>
-        </scene>
-        <!--Description-->
-        <scene sceneID="Ukf-Vk-TLE">
-            <objects>
-                <viewController id="FGH-t1-UP8" customClass="DescriptionViewController" customModule="HEFT" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kZb-gW-Ruu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Instructions were Provided" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100000" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-xS-vyE">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="q7g-KM-B3j"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Description" id="7wc-ir-F6E"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="erp-VE-aRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2804" y="102"/>
         </scene>
     </scenes>
     <resources>
