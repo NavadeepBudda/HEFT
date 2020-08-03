@@ -150,15 +150,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Description was Provided" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100000" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-Ka-Odh">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-OF-jjQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100000" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-Ka-Odh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3258"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat varius venenatis. Donec sit amet lacus ipsum. Suspendisse ut sodales ligula, et eleifend nunc. Cras erat orci, vestibulum commodo eros sit amet, viverra egestas orci. Pellentesque posuere arcu sit amet velit sagittis, sit amet dictum purus tristique. Vestibulum vitae ipsum metus. Aliquam non sem sed sem pellentesque eleifend. Phasellus rutrum facilisis mi, at condimentum lacus molestie ut. Sed ut lorem a est tristique porta. Morbi id egestas ante. Donec in est sit amet orci pellentesque ultrices sit amet nec arcu. Suspendisse pharetra nisi sit amet leo euismod interdum.
+
+Nam vitae accumsan libero. Pellentesque dignissim, nisl eget aliquet elementum, neque metus fermentum orci, vel finibus est diam a dolor. Donec ac condimentum elit, sit amet scelerisque nisl. Duis ipsum nibh, fringilla finibus condimentum quis, sodales id mauris. Morbi odio purus, scelerisque sed quam at, aliquam finibus elit. Vivamus pellentesque, est vel sodales varius, nibh ante cursus tellus, in pellentesque diam tellus non turpis. Duis id sapien in dolor faucibus tempor eget non nunc. Nam ex massa, lobortis dictum tempor non, malesuada et tellus. Morbi at nisl aliquet, sollicitudin lacus sit amet, sagittis enim. Nam vitae blandit sem, quis convallis neque. Morbi pellentesque lacinia aliquam. Nunc orci lorem, porttitor id vehicula eget, aliquam vitae ligula.
+
+Fusce faucibus purus sit amet magna dapibus, a mattis nibh cursus. Curabitur at sodales justo. Curabitur eget lectus non nisl cursus porttitor. Donec accumsan lacus nulla, eget lacinia tortor molestie at. Ut varius tempor luctus. Nam tristique augue quis mauris facilisis, id facilisis augue sagittis. Suspendisse potenti. Praesent mi quam, posuere eu tellus quis, faucibus tincidunt ex. Donec consequat auctor varius. Donec blandit nibh vel nisl imperdiet ornare. Nunc at quam pellentesque, consequat neque et, pretium turpis. Nulla ultricies tempus scelerisque. Morbi dapibus nulla ligula, dignissim porta massa elementum eget.
+
+Duis et suscipit purus, in lobortis tellus. Etiam et enim non nisl dapibus pretium nec sodales sem. Morbi aliquet sapien eu tincidunt pellentesque. Sed ornare, mi eget placerat fringilla, sapien metus viverra erat, at vestibulum diam magna vel sapien. Maecenas eleifend ipsum scelerisque dui venenatis, in efficitur nisi vulputate. Curabitur iaculis faucibus magna, a tincidunt nisi condimentum sit amet. In hac habitasse platea dictumst. Maecenas elementum lectus nec condimentum sodales. Nam vitae tristique leo. Aliquam vitae dolor eget nisl dictum auctor. Cras consectetur ipsum id risus laoreet egestas. Aliquam tincidunt mauris id velit vestibulum lobortis. Nam vehicula sit amet magna eu volutpat.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rKx-Ka-Odh" firstAttribute="top" secondItem="3f8-OF-jjQ" secondAttribute="top" id="4l4-qJ-8f7"/>
+                                    <constraint firstAttribute="trailing" secondItem="rKx-Ka-Odh" secondAttribute="trailing" id="BNO-Lf-zDY"/>
+                                    <constraint firstItem="rKx-Ka-Odh" firstAttribute="width" secondItem="3f8-OF-jjQ" secondAttribute="width" id="Q4p-gt-ZvB"/>
+                                    <constraint firstAttribute="bottom" secondItem="rKx-Ka-Odh" secondAttribute="bottom" constant="646" id="k5P-0G-S1z"/>
+                                    <constraint firstItem="rKx-Ka-Odh" firstAttribute="leading" secondItem="3f8-OF-jjQ" secondAttribute="leading" id="yxb-Pq-vp4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jqn-vr-cyT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BhS-0t-j63"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="height" secondItem="3fK-CB-EnN" secondAttribute="height" id="Lva-LJ-l8D"/>
+                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="leading" secondItem="XIf-Ze-npJ" secondAttribute="leading" id="Try-jl-8e3"/>
+                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="width" secondItem="3fK-CB-EnN" secondAttribute="width" id="cad-dS-mZq"/>
+                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="top" secondItem="XIf-Ze-npJ" secondAttribute="top" id="o60-ez-KGa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XIf-Ze-npJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="Elc-MN-EmX"/>
@@ -168,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQZ-qo-5YM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="117"/>
+            <point key="canvasLocation" x="2798.5507246376815" y="116.51785714285714"/>
         </scene>
         <!--Made by Navadeep, Samvid, and Anushka-->
         <scene sceneID="bRF-7t-kFO">
