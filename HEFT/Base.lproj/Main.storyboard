@@ -168,10 +168,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="height" secondItem="3fK-CB-EnN" secondAttribute="height" id="Lva-LJ-l8D"/>
-                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="leading" secondItem="XIf-Ze-npJ" secondAttribute="leading" id="Try-jl-8e3"/>
-                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="width" secondItem="3fK-CB-EnN" secondAttribute="width" id="cad-dS-mZq"/>
-                            <constraint firstItem="3f8-OF-jjQ" firstAttribute="top" secondItem="XIf-Ze-npJ" secondAttribute="top" id="o60-ez-KGa"/>
+                           
                         <viewLayoutGuide key="safeArea" id="XIf-Ze-npJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="Elc-MN-EmX"/>
