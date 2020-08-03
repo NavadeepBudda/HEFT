@@ -142,21 +142,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-OF-jjQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="896"/>
-                                <subviews>
-                                    
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3258"/>
-                                        
-                                </subviews>
-                                <constraints>
-                                    
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="jqn-vr-cyT"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="BhS-0t-j63"/>
-                            </scrollView>
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Description was Provided" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100000" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-Ka-Odh">
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,11 +149,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                           
                         <viewLayoutGuide key="safeArea" id="XIf-Ze-npJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="Elc-MN-EmX"/>
@@ -178,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQZ-qo-5YM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798.5507246376815" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2800" y="117"/>
         </scene>
         <!--Made by Navadeep, Samvid, and Anushka-->
         <scene sceneID="bRF-7t-kFO">
